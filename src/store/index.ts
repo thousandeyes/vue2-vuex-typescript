@@ -1,15 +1,20 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+import { Store } from '@/store/Store';
+import { CountStore } from '@/store/CountStore';
+import { MetaStore } from '@/store/MetaStore';
+import { ClassyCountStore } from '@/store/ClassyCountStore';
+import { ClassyMetaStore } from '@/store/ClassyMetaStore';
+
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    Store,
+    CountStore,
+    MetaStore,
+    ClassyCountStore,
+    ClassyMetaStore,
   }
-})
+});
